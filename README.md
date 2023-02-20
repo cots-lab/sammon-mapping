@@ -8,41 +8,43 @@ The sammon function in this library provides an implementation of the Sammon Map
 
 # Function Documentation
 The sammon function implements the Sammon Mapping algorithm in Python. The function takes the following parameters:
-x: array-like, shape (n_samples, n_features)
+
+`x`: array-like, shape (n_samples, n_features)
 The input data.
 
-n: int, optional (default: 2)
+`n`: int, optional (default: 2)
 The dimensionality of the output space. The default is 2.
 
-display: int, optional (default: 0)
+`display`: int, optional (default: 0)
 Whether to display the iteration information or not. The default is 0.
 
-inputdist: str, optional (default: 'raw')
+`inputdist`: str, optional (default: 'raw')
 The type of distance metric used in the input space. Possible values are:
 
 'raw': Euclidean distance
 'pcorr': Pearson correlation distance
 'spear': Spearman correlation distance
-maxhalves: int, optional (default: 20)
+
+`maxhalves`: int, optional (default: 20)
 The maximum number of times the step halving procedure can be applied. The default is 20.
 
-maxiter: int, optional (default: 500)
+`maxiter`: int, optional (default: 500)
 The maximum number of iterations. The default is 500.
 
-tolfun: float, optional (default: 1e-9)
+`tolfun`: float, optional (default: 1e-9)
 The tolerance for the change in the stress function. The default is 1e-9.
 
-init: str, optional (default: 'pca')
+`init`: str, optional (default: 'pca')
 The type of initialization used for the output space. Possible values are:
 
 'pca': Principal component analysis initialization
 'random': Random initialization
 The function returns:
 
-y: array-like, shape (n_samples, n_components)
+`y`: array-like, shape (n_samples, n_components)
 The transformed output data.
 
-stress: float
+`stress`: float
 The final value of the stress function.
 
 # Reference
