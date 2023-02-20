@@ -1,0 +1,7 @@
+README.md
+setup.py
+sammon/sammon.py
+sammon_mapping.egg-info/PKG-INFO
+sammon_mapping.egg-info/SOURCES.txt
+sammon_mapping.egg-info/dependency_links.txt
+sammon_mapping.egg-info/top_level.txt
