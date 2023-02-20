@@ -1,4 +1,7 @@
 # Sammon Mapping
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)  [![PyPi Version](https://img.shields.io/pypi/v/yt2mp3.svg)](https://pypi.python.org/pypi/yt2mp3/) [![Python Versions](https://img.shields.io/pypi/pyversions/yt2mp3.svg)](https://pypi.python.org/pypi/yt2mp3/) [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde) [![GitHub Release](https://img.shields.io/github/release/tterb/PlayMusic.svg?style=flat)]() 
+
+
 Sammon mapping is a nonlinear dimensionality reduction technique that is used to represent high-dimensional data in a lower dimensional space while preserving the pairwise distances between data points as much as possible. The technique was introduced by John W. Sammon Jr. in 1969.
 
 The Sammon Mapping algorithm tries to minimize a stress function that quantifies the difference between the pairwise distances in the original high-dimensional space and the pairwise distances in the lower dimensional space. The algorithm iteratively adjusts the positions of the data points in the lower dimensional space until the stress function is minimized.
@@ -7,7 +10,7 @@ The Sammon Mapping algorithm tries to minimize a stress function that quantifies
 The sammon function in this library provides an implementation of the Sammon Mapping algorithm. The function takes the following parameters:
 
 # Function Documentation
-The sammon function implements the Sammon Mapping algorithm in Python. The function takes the following parameters:
+#### The sammon function implements the Sammon Mapping algorithm in Python. The function takes the following parameters:
 
 `x`: array-like, shape (n_samples, n_features)
 The input data.
@@ -19,11 +22,12 @@ The dimensionality of the output space. The default is 2.
 Whether to display the iteration information or not. The default is 0.
 
 `inputdist`: str, optional (default: 'raw')
-The type of distance metric used in the input space. Possible values are:
+The type of distance metric used in the input space. 
 
-'raw': Euclidean distance
-'pcorr': Pearson correlation distance
-'spear': Spearman correlation distance
+Possible values are:
+- 'raw': Euclidean distance
+- 'pcorr': Pearson correlation distance
+- 'spear': Spearman correlation distance
 
 `maxhalves`: int, optional (default: 20)
 The maximum number of times the step halving procedure can be applied. The default is 20.
@@ -35,11 +39,14 @@ The maximum number of iterations. The default is 500.
 The tolerance for the change in the stress function. The default is 1e-9.
 
 `init`: str, optional (default: 'pca')
-The type of initialization used for the output space. Possible values are:
+The type of initialization used for the output space. 
 
-'pca': Principal component analysis initialization
-'random': Random initialization
-The function returns:
+Possible values are:
+- 'pca': Principal component analysis initialization
+- 'random': Random initialization
+
+
+#### The function returns:
 
 `y`: array-like, shape (n_samples, n_components)
 The transformed output data.
@@ -50,4 +57,4 @@ The final value of the stress function.
 # Reference
 This implementation is based on the algorithm described in the following paper:
 
-Sammon, J. W. (1969). A nonlinear mapping for data structure analysis. IEEE Transactions on Computers, C-18(5), 401-409. doi: 10.1109/T-C.1969.222678
+Sammon, J. W. (1969). **A nonlinear mapping for data structure analysis.** IEEE Transactions on Computers, C-18(5), 401-409. doi: *10.1109/T-C.1969.222678*
